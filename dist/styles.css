@@ -1,0 +1,5 @@
+.test {
+    color: #0000ff;
+    -webkit-transform: translateX(34px);
+            transform: translateX(34px)
+}
