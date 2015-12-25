@@ -1,1 +1,57 @@
 /*header.css*/
+header {
+  position: relative;
+  z-index: 999;
+  box-shadow: 0 -1px 7px $black;
+}
+
+.tiny-header {
+  display: flex;
+  justify-content: flex-end;
+  background: $black;
+  padding-right: 30px;
+  &__nav {
+    &__list {
+      list-style: none;
+      font-size: 60%;
+      color: $white;
+      & > li {
+        font-family: $headingFont;
+        text-transform: uppercase;
+        display: inline-block;
+        margin-right: 9px;
+      }
+    }
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 6px 0;
+  &__nav {
+    lost-column: 1/4;
+    &__list {
+      list-style: none;
+      & > li {
+        font-family: $headingFont;
+        font-size: 15px;
+        color: $gray;
+        display: inline-block;
+        margin-right: 12px;
+      }
+    }
+  }
+  &__title {
+    lost-column: 1/2;
+    text-align: center;
+  }
+  &__logo {
+    lost-column: 1/4;
+    text-align: right;
+    &__img {
+      width: 25%;
+      height: auto;
+    }
+  }
+}

@@ -52,7 +52,7 @@ gulp.task('markup', () => {
 gulp.task('images', () => {
 	return gulp.src('src/images/**/*.+(gif|jpg|png|svg)')
 		.pipe(gulp.dest('dist/images'));
-})
+});
 
 gulp.task('watch', () => {
 	gulp.watch('src/templates/**/*.+(html|nj|nunjucks)', ['markup', reload]);

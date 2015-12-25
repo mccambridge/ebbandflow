@@ -1,0 +1,9 @@
+.hero {
+  lost-align: center;
+  min-height: 480px;
+  background: url(/images/desert.jpg) no-repeat;
+  background-size: cover;
+	&__heading {
+    color: $white;
+  }
+}

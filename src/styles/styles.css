@@ -3,7 +3,11 @@
 
 /* variables */
 @import '_colors.css';
+@import '_fonts.css';
 
 /* layout */
 @import 'layout.css';
 @import 'header.css';
+
+/* pages */
+@import 'index.css'
