@@ -1,3 +1,9 @@
+/*styles.css*/
 @import '../../node_modules/normalize.css/normalize.css';
 
-@import 'test.css';
+/* variables */
+@import '_colors.css';
+
+/* layout */
+@import 'layout.css';
+@import 'header.css';
