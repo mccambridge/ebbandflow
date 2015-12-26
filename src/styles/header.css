@@ -20,6 +20,9 @@ header {
         text-transform: uppercase;
         display: inline-block;
         margin-right: 9px;
+        &:last-child {
+          margin-right: 0;
+        }
       }
     }
   }

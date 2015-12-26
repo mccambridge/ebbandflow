@@ -1,5 +1,6 @@
 /*brands.css*/
 .brands {
+  background-color: $white;
   padding: $section-padding;
   &__heading {
     text-align: center;

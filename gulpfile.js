@@ -1,20 +1,22 @@
-const gulp 			= require('gulp');
-const sourcemaps 	= require('gulp-sourcemaps');
-const babel 		= require('gulp-babel');
-const concat 		= require('gulp-concat');
-const uglify 		= require('gulp-uglify');
-const rename 		= require('gulp-rename')
+const gulp 			     = require('gulp');
+const sourcemaps     = require('gulp-sourcemaps');
+const babel 		     = require('gulp-babel');
+const concat 		     = require('gulp-concat');
+const uglify 		     = require('gulp-uglify');
+const rename 		     = require('gulp-rename')
 
-const postcss		= require('gulp-postcss');
-const precss 		= require('precss');
-const autoprefixer  = require('autoprefixer');
-const lost			= require('lost');
+const postcss		     = require('gulp-postcss');
+const precss 		     = require('precss');
+const autoprefixer   = require('autoprefixer');
+const mqpacker       = require('css-mqpacker');
+const csswring       = require('csswring');
+const lost			     = require('lost');
 
-const njRender		= require('gulp-nunjucks-render');
-const nj 			= njRender.nunjucks;
+const njRender		   = require('gulp-nunjucks-render');
+const nj 			       = njRender.nunjucks;
 
-const browserSync 	= require('browser-sync');
-const reload      	= browserSync.reload;
+const browserSync 	 = require('browser-sync');
+const reload      	 = browserSync.reload;
  
 gulp.task('scripts', () => {
 	return gulp.src('src/scripts/**/*.js')
@@ -35,7 +37,9 @@ gulp.task('styles', () => {
 	const processors = [
 		precss(),
 		lost,
-		autoprefixer({browsers: ['last 2 versions']})
+		autoprefixer({browsers: ['last 2 versions']}),
+    mqpacker,
+    csswring
 	];
 	return gulp.src('src/styles/styles.css')
 		.pipe(postcss(processors))
