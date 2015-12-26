@@ -23,6 +23,12 @@ header {
       }
     }
   }
+  &__icon {
+    font-size: 10px;
+    margin-left: 3px;
+    margin-right: 6px;
+    vertical-align: middle;
+  }
 }
 
 .header {

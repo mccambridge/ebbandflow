@@ -26,6 +26,7 @@
     "gulp": "^3.9.0",
     "gulp-babel": "^6.1.1",
     "gulp-concat": "^2.6.0",
+    "gulp-gm": "0.0.8",
     "gulp-nunjucks-render": "^1.0.0",
     "gulp-postcss": "^6.0.1",
     "gulp-rename": "^1.2.2",

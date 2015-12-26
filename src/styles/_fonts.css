@@ -1,11 +1,38 @@
 $logoFont: 'Libre Baskerville', serif;
 $headingFont: 'Montserrat', sans-serif;
 
+/*link colors*/
+a {
+  color: $linkColor;
+  text-decoration: none;
+  &:link, &:visited {
+    color: $linkColor;
+  }
+  &:hover, &:active {
+    color: $linkHover;
+    text-decoration: underline;
+  }
+  &.link-on-dark {
+    color: $linkOnDark;
+    &:link, &:visited {
+      color: $linkOnDark;
+    }
+    &:hover, &:active {
+      color: $linkOnDarkHover;
+      text-decoration: underline;
+    }
+  }
+}
+
 h1, h2, h3 {
   font-family: $headingFont;
-  text-transform: uppercase;
   font-weight: normal;
   color: $black;
+  font-size: 27px;
+  &.uppercase {
+    text-transform: uppercase;
+    font-size: 24px;
+  }
 }
 
 h1.wordmark {

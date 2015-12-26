@@ -1,4 +1,11 @@
 /*_colors.css*/
-$white: #fefefc;
-$black: #333;
-$gray:  #777;
+$white:         #fefefc;
+$black:         #333;
+$gray:          #777;
+$green:         #007236;
+$greenyWhite:   #e0ffef;
+
+$linkColor:       $gray;
+$linkHover:       $green;
+$linkOnDark:      $white;
+$linkOnDarkHover: $greenyWhite;

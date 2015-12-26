@@ -1,0 +1,10 @@
+/*brands.css*/
+.brands {
+  padding: $section-padding;
+  &__heading {
+    text-align: center;
+  }
+  &__list {
+
+  }
+}

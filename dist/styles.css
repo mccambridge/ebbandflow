@@ -305,11 +305,38 @@ td, th {
 
 /* variables */
 /*_colors.css*/
+/*_spacing.css*/
+/*link colors*/
+a {
+    color: #777;
+    text-decoration: none;
+}
+a:link, a:visited {
+    color: #777;
+}
+a:hover, a:active {
+    color: #007236;
+    text-decoration: underline;
+}
+a.link-on-dark {
+    color: #fefefc;
+}
+a.link-on-dark:link, a.link-on-dark:visited {
+    color: #fefefc;
+}
+a.link-on-dark:hover, a.link-on-dark:active {
+    color: #e0ffef;
+    text-decoration: underline;
+}
 h1, h2, h3 {
     font-family: 'Montserrat',sans-serif;
-    text-transform: uppercase;
     font-weight: normal;
     color: #333;
+    font-size: 27px;
+}
+h1.uppercase, h2.uppercase, h3.uppercase {
+    text-transform: uppercase;
+    font-size: 24px;
 }
 h1.wordmark {
     font-family: 'Libre Baskerville',serif;
@@ -321,6 +348,35 @@ h1.wordmark > span {
     font-family: 'Montserrat',sans-serif;
     font-size: 14px;
     color: #777;
+}
+/*_icons.css*/
+/*@font-face {
+    font-family: 'icomoon';
+    src:    url('/fonts/icomoon.eot?tsu3wn');
+    src:    url('/fonts/icomoon.eot?tsu3wn#iefix') format('embedded-opentype'),
+        url('/fonts/icomoon.ttf?tsu3wn') format('truetype'),
+        url('/fonts/icomoon.woff?tsu3wn') format('woff'),
+        url('/fonts/icomoon.svg?tsu3wn#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}*/
+/*^^^ goes in page header to preload*/
+[class^="icon-"], [class*=" icon-"] {/* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;/* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-mail:before {
+    content: "\e900";
+}
+.icon-instagram:before {
+    content: "\e901";
 }
 
 /* layout */
@@ -366,6 +422,12 @@ header {
     text-transform: uppercase;
     display: inline-block;
     margin-right: 9px;
+}
+.tiny-header__icon {
+    font-size: 10px;
+    margin-left: 3px;
+    margin-right: 6px;
+    vertical-align: middle;
 }
 .header {
     display: -webkit-flex;
@@ -441,6 +503,8 @@ header {
 }
 
 /* pages */
+/*index.css*/
+/*hero.css*/
 .hero {
     position: relative;
     min-height: 480px;
@@ -459,3 +523,11 @@ header {
 .hero__heading {
     color: #fefefc;
 }
+/*brands.css*/
+.brands {
+    padding: 24px 30px;
+}
+.brands__heading {
+    text-align: center;
+}
+.brands__list {}

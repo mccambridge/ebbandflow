@@ -1,8 +1,8 @@
 <!-- index.html -->
-{% extends 'layout.html' %}
+{% extends '_layout.html' %}
 
 {% block content %}
-<section class="hero">
-	<h2 class="hero__heading">This is the desert</h2>
-</section>
+  {% include 'index--hero.html' %}
+  {% include 'index--brands.html' %}
+  {% include 'index--locations.html' %}
 {% endblock %}

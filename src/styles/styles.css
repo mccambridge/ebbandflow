@@ -3,7 +3,9 @@
 
 /* variables */
 @import '_colors.css';
+@import '_spacing.css';
 @import '_fonts.css';
+@import '_icons.css';
 
 /* layout */
 @import 'layout.css';

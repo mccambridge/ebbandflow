@@ -50,15 +50,21 @@ gulp.task('markup', () => {
 });
 
 gulp.task('images', () => {
-	return gulp.src('src/images/**/*.+(gif|jpg|png|svg)')
-		.pipe(gulp.dest('dist/images'));
+  return gulp.src('src/images/**/*.+(gif|jpg|png|svg)')
+    .pipe(gulp.dest('dist/images'));
+});
+
+gulp.task('fonts', () => {
+	return gulp.src('src/fonts/**/*')
+		.pipe(gulp.dest('dist/fonts'));
 });
 
 gulp.task('watch', () => {
 	gulp.watch('src/templates/**/*.+(html|nj|nunjucks)', ['markup', reload]);
 	gulp.watch('src/html/**/*.+(html|nj|nunjucks)', ['markup', reload]);
 	gulp.watch('src/styles/**/*.css', ['styles', reload]);
-	gulp.watch(['src/scripts/**/*.js'], ['scripts', reload]);
+  gulp.watch(['src/scripts/**/*.js'], ['scripts', reload]);
+	gulp.watch(['src/fonts/**/*.js'], ['fonts', reload]);
 	gulp.watch(['src/images/**/*.+(gif|jpg|png|svg)'], ['images', reload]);
 	gulp.watch("*.html", reload);
 });
@@ -71,6 +77,6 @@ gulp.task('sync', () => {
 	});
 });
 
-gulp.task('server', ['markup', 'styles', 'images', 'sync', 'scripts', 'watch']);
+gulp.task('server', ['markup', 'styles', 'fonts', 'images', 'sync', 'scripts', 'watch']);
 
-gulp.task('default', ['markup', 'styles', 'images', 'scripts']);
+gulp.task('default', ['markup', 'styles', 'fonts', 'images', 'scripts']);
