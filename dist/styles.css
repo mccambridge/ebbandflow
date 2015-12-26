@@ -309,17 +309,17 @@ h1, h2, h3 {
     font-family: 'Montserrat',sans-serif;
     text-transform: uppercase;
     font-weight: normal;
-    color: #222;
+    color: #333;
 }
 h1.wordmark {
     font-family: 'Libre Baskerville',serif;
     text-transform: uppercase;
     font-size: 24px;
-    line-height: 1em;
+    line-height: 0.95em;
 }
 h1.wordmark > span {
     font-family: 'Montserrat',sans-serif;
-    font-size: 15px;
+    font-size: 14px;
     color: #777;
 }
 
@@ -344,7 +344,7 @@ header:after, footer:after, section:after {
 header {
     position: relative;
     z-index: 999;
-    box-shadow: 0 -1px 7px #222;
+    box-shadow: 0 -1px 7px #333;
 }
 .tiny-header {
     display: -webkit-flex;
@@ -353,7 +353,7 @@ header {
     -webkit-justify-content: flex-end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    background: #222;
+    background: #333;
     padding-right: 30px;
 }
 .tiny-header__nav__list {
@@ -380,7 +380,7 @@ header {
     -webkit-flex: 0 0 auto;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
-    width: calc(99.99% * 1/4 - (30px - 30px * 1/4));
+    width: calc(99.99% * 3/10 - (30px - 30px * 3/10));
 }
 .header__nav:nth-child(n) {
     margin-right: 30px;
@@ -388,24 +388,25 @@ header {
 .header__nav:last-child {
     margin-right: 0;
 }
-.header__nav:nth-child(4n) {
+.header__nav:nth-child(10n) {
     margin-right: 0;
 }
 .header__nav__list {
     list-style: none;
+    padding-left: 24px;
 }
 .header__nav__list > li {
     font-family: 'Montserrat',sans-serif;
     font-size: 15px;
     color: #777;
     display: inline-block;
-    margin-right: 12px;
+    margin-right: 15px;
 }
 .header__title {
     -webkit-flex: 0 0 auto;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
-    width: calc(99.99% * 1/2 - (30px - 30px * 1/2));
+    width: calc(99.99% * 2/5 - (30px - 30px * 2/5));
     text-align: center;
 }
 .header__title:nth-child(n) {
@@ -414,14 +415,14 @@ header {
 .header__title:last-child {
     margin-right: 0;
 }
-.header__title:nth-child(2n) {
+.header__title:nth-child(5n) {
     margin-right: 0;
 }
 .header__logo {
     -webkit-flex: 0 0 auto;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
-    width: calc(99.99% * 1/4 - (30px - 30px * 1/4));
+    width: calc(99.99% * 3/10 - (30px - 30px * 3/10));
     text-align: right;
 }
 .header__logo:nth-child(n) {
@@ -430,12 +431,13 @@ header {
 .header__logo:last-child {
     margin-right: 0;
 }
-.header__logo:nth-child(4n) {
+.header__logo:nth-child(10n) {
     margin-right: 0;
 }
 .header__logo__img {
-    width: 25%;
+    width: 20%;
     height: auto;
+    margin-right: 24px;
 }
 
 /* pages */
