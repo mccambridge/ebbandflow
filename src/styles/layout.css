@@ -3,6 +3,8 @@
 /*layout.css*/
 body {
 	background: $white;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 header, footer, section {

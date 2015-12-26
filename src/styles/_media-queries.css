@@ -1,0 +1,8 @@
+/*_media-queries.css*/
+
+/* remember, mobile first so no small mq */
+$mqMedium: 768px;
+$mqLarge: 1200px;
+
+$medium: screen and (min-device-width: $mqMedium);
+$large: screen and (min-device-width: $mqLarge);

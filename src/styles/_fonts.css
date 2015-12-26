@@ -38,8 +38,6 @@ h1, h2, h3 {
 h1.wordmark {
   font-family: $logoFont;
   text-transform: uppercase;
-  font-size: 24px;
-  line-height: 0.95em;
   > span {
     font-family: $headingFont;
     font-size: 14px;

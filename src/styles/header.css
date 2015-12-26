@@ -9,7 +9,7 @@ header {
   display: flex;
   justify-content: flex-end;
   background: $black;
-  padding-right: 30px;
+  padding-right: 12px;
   &__nav {
     &__list {
       list-style: none;
@@ -38,9 +38,11 @@ header {
   display: flex;
   align-items: center;
   padding: 6px 0;
+  height: 69px;
   &__nav {
-    lost-column: 3/10;
+    lost-column: 1/4;
     &__list {
+      display: none;
       list-style: none;
       padding-left: 24px;
       & > li {
@@ -53,16 +55,60 @@ header {
     }
   }
   &__title {
-    lost-column: 2/5;
+    lost-column: 2/4;
     text-align: center;
+    &__wordmark { 
+      font-size: 18px;
+      line-height: 0.95em;
+    }
+    &__state-short {
+      display: inline;
+    }
+    &__state-full {
+      display: none;
+    }
   }
   &__logo {
-    lost-column: 3/10;
+    lost-column: 1/4;
     text-align: right;
     &__img {
-      width: 20%;
+      width: 66px;
       height: auto;
       margin-right: 24px;
+    }
+  }
+}
+
+@media $medium {
+  .tiny-header {
+    padding-right: 30px;
+  }
+  .header {
+    height: 81px;
+    &__nav {
+      lost-column: 3/10;
+      &__list {
+        display: block;
+      }
+    }
+    &__title {
+      lost-column: 2/5;
+      &__wordmark { 
+        font-size: 24px;
+        line-height: 0.95em;
+      }
+      &__state-short {
+        display: none;
+      }
+      &__state-full {
+        display: inline;
+      }
+    }
+    &__logo {
+      lost-column: 3/10;
+      &__img {
+        width: 72px;
+      }
     }
   }
 }

@@ -2,9 +2,16 @@
 .hero {
   lost-align: center;
   min-height: 480px;
-  background: url(/images/desert.jpg) no-repeat;
+  background: url(/images/desert.jpg) center center no-repeat;
   background-size: cover;
   &__heading {
     color: $white;
+    text-align: center;
+  }
+}
+
+@media $medium {
+  .hero {
+    background-position: center -120px;
   }
 }

@@ -7,6 +7,7 @@ const rename 		     = require('gulp-rename')
 
 const postcss		     = require('gulp-postcss');
 const precss 		     = require('precss');
+const postcssfocus   = require('postcss-focus')
 const autoprefixer   = require('autoprefixer');
 const mqpacker       = require('css-mqpacker');
 const csswring       = require('csswring');
@@ -36,6 +37,7 @@ gulp.task('scripts', () => {
 gulp.task('styles', () => {
 	const processors = [
 		precss(),
+    postcssfocus,
 		lost,
 		autoprefixer({browsers: ['last 2 versions']}),
     mqpacker,
