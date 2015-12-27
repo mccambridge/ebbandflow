@@ -57,8 +57,20 @@
 	(function ($) {
 		var ebby = {
 			deviceTweaks: function deviceTweaks() {
-				if (screen.width < 1200) {
+				var $ww = $(window).width();
+				if ($ww < 1200) {
 					$('.header__nav__list').addClass('header__nav__list--off-canvas');
+				}
+				if ($ww >= 600) {
+					var $grid = $('.grid').masonry({
+						itemSelector: '.grid__item',
+						columnWidth: '.grid__sizer',
+						percentPosition: true
+					});
+
+					$grid.imagesLoaded().progress(function () {
+						$grid.masonry('layout');
+					});
 				}
 			},
 			events: function events() {

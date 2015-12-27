@@ -6,9 +6,21 @@ const menuClickHandler = require('./events/menuClick.js');
 (($) => {
   const ebby = {
     deviceTweaks() {
-      if (screen.width < 1200) {
+      const $ww = $(window).width();
+      if ($ww < 1200) {
         $('.header__nav__list')
           .addClass('header__nav__list--off-canvas');
+      }
+      if ($ww >= 600) {
+        var $grid = $('.grid').masonry({
+          itemSelector: '.grid__item',
+          columnWidth: '.grid__sizer',
+          percentPosition: true
+        });
+
+        $grid.imagesLoaded().progress(() => {
+          $grid.masonry('layout');
+        });
       }
     },
 

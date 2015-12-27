@@ -11,6 +11,7 @@
 @import '_icons.css';
 
 /* utility */
+@import '_masonry.css';
 @import '_utils.css';
 
 /* layout */

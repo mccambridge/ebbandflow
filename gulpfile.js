@@ -74,7 +74,7 @@ gulp.task('fonts', () => {
 gulp.task('locations', () => {
   gulp.src('src/media/locations/**/*')
     .pipe(parallel(
-        gm((tmp) => tmp.resize(400).quality(60)),
+        gm((tmp) => tmp.resize(900).quality(60)),
         os.cpus().length
       ))
       .pipe(gulp.dest('dist/images/locations'));

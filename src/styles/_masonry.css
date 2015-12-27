@@ -1,0 +1,29 @@
+/*_masonry.css*/
+
+.grid {
+  &__sizer {
+    display: none;
+  }
+  &__item {
+    margin-bottom: 21px;
+    > img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@media $medium {
+  .grid {
+    display: flex;
+    &__sizer {
+      display: block;
+    }
+    &__sizer, &__item {
+      lost-masonry-column: 1/3;
+      &--double-wide {
+        lost-masonry-column: 2/3;
+      }
+    }
+  }
+}
