@@ -4,6 +4,9 @@ $headingFont: 'Montserrat', sans-serif;
 $hugeHeading: 54px;
 $subheading: 18px;
 
+$largeText: 18px;
+$mediumText: 15px;
+
 /*link colors*/
 a {
   color: $linkColor;

@@ -20,6 +20,8 @@ header {
         text-transform: uppercase;
         display: inline-block;
         margin-right: 9px;
+        position: relative;
+        z-index: 99;
         &:last-child {
           margin-right: 0;
         }
@@ -80,7 +82,7 @@ header {
       }
       & > li {
         font-family: $headingFont;
-        font-size: 15px;
+        font-size: $largeText;
         color: $gray;
         display: inline-block;
         margin-right: 15px;
@@ -185,6 +187,9 @@ header {
         display: block;
         transition: none;
         transform: trasnlateX(0);
+        > li {
+          font-size: $mediumText;
+        }
       }
     }
     &__title {
