@@ -8,7 +8,8 @@ header {
 .tiny-header {
   display: flex;
   justify-content: flex-end;
-  background: $black;
+  background: $darkGreen;
+  border-bottom: 1px solid $black;
   padding-right: 12px;
   &__nav {
     &__list {
@@ -41,6 +42,7 @@ header {
   align-items: center;
   padding: 6px 0;
   height: 72px;
+  border-top: 1px solid $pureWhite;
   &__nav {
     lost-column: 1/4;
     text-align: left;

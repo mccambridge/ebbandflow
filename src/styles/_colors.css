@@ -1,8 +1,10 @@
 /*_colors.css*/
-$white:         #fefefc;
+$white:         #fcfcfa;
+$pureWhite:     #fff;
 $black:         #333;
 $trueBlack:     #000;
 $gray:          #888;
+$lightGray:     #cbd6d1;
 $green:         #007236;
 $lightGreen:    #778c81;
 $darkGreen:     #35403b;
