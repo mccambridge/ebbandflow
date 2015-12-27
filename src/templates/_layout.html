@@ -32,43 +32,44 @@
     <!--[if lt IE 7]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
-    <header>
-      <section class="tiny-header">
-        <nav class="tiny-header__nav">
-            <ul class="tiny-header__nav__list">
-                <li>
-                  <a class="link-on-dark" href="mailto:timgrady@me.com"><i class="tiny-header__icon icon icon-mail"></i> Email</a>
-                </li>
-                <li>
-                  <a class="link-on-dark" href="instagram.com/ebbandflowsc/" target="_blank"><i class="tiny-header__icon icon icon-instagram"></i> Instagram</a>
-                </li>
+    <div class="container">
+      <header>
+        <section class="tiny-header">
+          <nav class="tiny-header__nav">
+              <ul class="tiny-header__nav__list">
+                  <li>
+                    <a class="link-on-dark" href="mailto:timgrady@me.com"><i class="tiny-header__icon icon icon-mail"></i> Email</a>
+                  </li>
+                  <li>
+                    <a class="link-on-dark" href="instagram.com/ebbandflowsc/" target="_blank"><i class="tiny-header__icon icon icon-instagram"></i> Instagram</a>
+                  </li>
+              </ul>
+          </nav>
+        </section>
+        <section class="header">
+          <nav class="header__nav">
+            <i id="header-menu-trigger" class="header__nav__hamburger icon icon-menu"></i>
+            <ul class="header__nav__list">
+                <li><a href="/">Home</a></li>
+                <li><a href="/services.html">Services</a></li>
+                <li><a href="/locations.html">Locations</a></li>
             </ul>
-        </nav>
-      </section>
-      <section class="header">
-        <nav class="header__nav">
-          <i id="header-menu-trigger" class="header__nav__hamburger icon icon-menu"></i>
-          <ul class="header__nav__list">
-              <li><a href="/">Home</a></li>
-              <li><a href="/services.html">Services</a></li>
-              <li><a href="/locations.html">Locations</a></li>
-          </ul>
-        </nav>
-        <div class="header__title">
-            <h1 class="header__title__wordmark wordmark">Ebb &amp; Flow Pictures<br /><span>Charleston, <span class="header__title__state-full">South Carolina</span><span class="header__title__state-short">SC</span></span></h1>
-        </div>
-        <div class="header__logo">
-            <img class="header__logo__img svg" src="/images/compass.svg" alt="Ebb & Flow Pictures logo" />
-        </div>
-      </section>
-    </header>
+          </nav>
+          <div class="header__title">
+              <h1 class="header__title__wordmark wordmark">Ebb &amp; Flow Pictures<br /><span>Charleston, <span class="header__title__state-full">South Carolina</span><span class="header__title__state-short">SC</span></span></h1>
+          </div>
+          <div class="header__logo">
+              <img class="header__logo__img svg" src="/images/compass.svg" alt="Ebb & Flow Pictures logo" />
+          </div>
+        </section>
+      </header>
 
-    {% block content %}{% endblock %}
+      {% block content %}{% endblock %}
 
-    <footer>
-      <p>Footer</p>
-    </footer>
+      <footer>
+        <p>Footer</p>
+      </footer>
+    </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || alert('Oh, no! The page can\'t find an important file. Things might not quite work properly.')</script>

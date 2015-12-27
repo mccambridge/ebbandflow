@@ -41,14 +41,13 @@
       $wordmark.toggleClass('header__title__wordmark--off-canvas');
       $logo.toggleClass('header__logo--off-canvas');
 
+      $('html, body').toggleClass('frozen');
+
       // if menu is opening, fix body position. or return to normal
       if ($menu.hasClass('header__nav__list--active')) {
-        const topVal = $('body').offset().top;
+        const topVal = $(window).scrollTop();
         const windowHeight = $(window).height();
-        $('body').css({'position': 'fixed', top: `${-topVal}px`});
-        $menu.css({'height': windowHeight});
-      } else {
-        $('body').css({'position': 'static'});
+        $menu.css({'height': windowHeight * 2, 'top': `${($menu.css('top') - topVal)}px`});
       }
 
       // handle transition on logo

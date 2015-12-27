@@ -5,10 +5,16 @@
 }
 
 /*layout.css*/
-body {
+body, .container {
 	background: $white;
   width: 100%;
   overflow-x: hidden;
+  min-height: 100%;
+}
+
+body.frozen, html.frozen {
+  overflow: hidden;
+  height: 100%;
 }
 
 header, footer, section {

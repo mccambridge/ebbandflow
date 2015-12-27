@@ -41,11 +41,12 @@ header {
   height: 72px;
   &__nav {
     lost-column: 1/4;
-    text-align: center;
+    text-align: left;
     &__hamburger {
       font-size: 36px;
       position: relative;
       z-index: 99;
+      margin-left: 21px;
       &--active {
         color: $white;
       }
@@ -130,9 +131,36 @@ header {
       }
     }
     &__img {
-      width: 66px;
+      width: 51px;
       height: auto;
       margin-right: 24px;
+    }
+  }
+}
+
+@media $small {
+  .header {
+    &__logo {
+      &__img {
+        width: 60px;
+      }
+    }
+  }
+}
+
+@media $medium {
+  .header {
+    &__nav {
+      &__hamburger {
+        margin-left: 30px;
+      }
+      &__list {
+        &--off-canvas {
+          & > li {
+            padding: 12px 33px;
+          }
+        }
+      }
     }
   }
 }
@@ -145,6 +173,7 @@ header {
     height: 81px;
     &__nav {
       lost-column: 3/10;
+      text-align: center;
       &__hamburger {
         display: none;
         &:active {
