@@ -173,7 +173,6 @@ header {
     height: 81px;
     &__nav {
       lost-column: 3/10;
-      text-align: center;
       &__hamburger {
         display: none;
         &:active {

@@ -1,6 +1,9 @@
 $logoFont: 'Libre Baskerville', serif;
 $headingFont: 'Montserrat', sans-serif;
 
+$hugeHeading: 54px;
+$subheading: 18px;
+
 /*link colors*/
 a {
   color: $linkColor;
@@ -29,9 +32,10 @@ h1, h2, h3 {
   font-weight: normal;
   color: $black;
   font-size: 27px;
+  text-shadow: 0 1px 0 $greenyWhite;
   &.uppercase {
     text-transform: uppercase;
-    font-size: 24px;
+    line-height: 1.1em;
   }
 }
 
@@ -43,4 +47,9 @@ h1.wordmark {
     font-size: 14px;
     color: $gray;
   }
+}
+
+h3 {
+  color: $gray;
+  font-size: $subheading;
 }

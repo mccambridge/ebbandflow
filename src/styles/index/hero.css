@@ -7,11 +7,16 @@
   &__heading {
     color: $white;
     text-align: center;
+    margin-top: -21px;
+    width: 100%;
   }
 }
 
-@media $medium {
+@media $large {
   .hero {
     background-position: center -120px;
+    &__heading {
+      font-size: $hugeHeading;
+    }
   }
 }
