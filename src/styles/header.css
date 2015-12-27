@@ -11,6 +11,8 @@ header {
   background: $darkGreen;
   border-bottom: 1px solid $black;
   padding-right: 12px;
+  position: relative;
+  z-index: 100;
   &__nav {
     &__list {
       list-style: none;
@@ -21,8 +23,6 @@ header {
         text-transform: uppercase;
         display: inline-block;
         margin-right: 9px;
-        position: relative;
-        z-index: 99;
         &:last-child {
           margin-right: 0;
         }
