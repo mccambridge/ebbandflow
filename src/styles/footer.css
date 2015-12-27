@@ -1,0 +1,7 @@
+/*footer.css*/
+
+footer {
+  padding: $section-padding;
+  min-height: 400px;
+  background-color: $darkGreen;
+}

@@ -4,9 +4,11 @@ $black:         #333;
 $trueBlack:     #000;
 $gray:          #888;
 $green:         #007236;
+$lightGreen:    #778c81;
+$darkGreen:     #35403b;
 $greenyWhite:   #e0ffef;
 
-$linkColor:       $gray;
+$linkColor:       $lightGreen;
 $linkHover:       $green;
 $linkOnDark:      $white;
 $linkOnDarkHover: $greenyWhite;

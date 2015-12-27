@@ -35,10 +35,14 @@ h1, h2, h3 {
   font-weight: normal;
   color: $black;
   font-size: 27px;
-  text-shadow: 0 1px 0 $greenyWhite;
+  text-shadow: 0 -1px 0 $greenyWhite;
   &.uppercase {
     text-transform: uppercase;
     line-height: 1.1em;
+  }
+  &.on-dark {
+    color: $white;
+    text-shadow: 0 -1px 0 $trueBlack;
   }
 }
 
@@ -48,11 +52,11 @@ h1, h2, h3 {
   > span {
     font-family: $headingFont;
     font-size: 14px;
-    color: $gray;
+    color: $lightGreen;
   }
 }
 
 h3 {
-  color: $gray;
+  color: $lightGreen;
   font-size: $subheading;
 }

@@ -1,0 +1,5 @@
+.locations {
+  padding: $section-padding;
+  background-color: $lightGreen;
+  min-height: 400px;
+}
