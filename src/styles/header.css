@@ -50,7 +50,8 @@ header {
       font-size: 36px;
       position: relative;
       z-index: 99;
-      margin-left: 21px;
+      padding: 9px;
+      margin-left: 12px;
       &--active {
         color: $white;
       }
@@ -160,7 +161,7 @@ header {
   .header {
     &__nav {
       &__hamburger {
-        margin-left: 30px;
+        margin-left: 21px;
       }
       &__list {
         &--off-canvas {

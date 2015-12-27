@@ -12,6 +12,14 @@
   }
 }
 
+@media $medium {
+  .hero {
+    &__heading {
+      font-size: $bigHeading;
+    }
+  }
+}
+
 @media $large {
   .hero {
     background-position: center -120px;

@@ -1,8 +1,9 @@
 $logoFont: 'Libre Baskerville', serif;
 $headingFont: 'Montserrat', sans-serif;
 
-$hugeHeading: 54px;
-$subheading: 18px;
+$hugeHeading: 48px;
+$bigHeading:  42px;
+$subheading:  18px;
 
 $largeText: 18px;
 $mediumText: 15px;
@@ -56,7 +57,7 @@ h1, h2, h3 {
   > span {
     font-family: $headingFont;
     font-size: 14px;
-    color: $lightGreen;
+    color: $gray;
   }
 }
 

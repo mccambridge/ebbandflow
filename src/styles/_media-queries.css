@@ -4,6 +4,6 @@ $mqSmall: 375px;
 $mqMedium: 600px;
 $mqLarge: 1200px;
 
-$small: screen and (min-device-width: $mqSmall);
-$medium: screen and (min-device-width: $mqMedium);
-$large: screen and (min-device-width: $mqLarge);
+$small: screen and (min-width: $mqSmall);
+$medium: screen and (min-width: $mqMedium);
+$large: screen and (min-width: $mqLarge);

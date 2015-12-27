@@ -1,4 +1,5 @@
 const gulp 			     = require('gulp');
+const webpack        = require('gulp-webpack');
 const sourcemaps     = require('gulp-sourcemaps');
 const babel 		     = require('gulp-babel');
 const concat 		     = require('gulp-concat');
@@ -16,18 +17,23 @@ const lost			     = require('lost');
 const njRender		   = require('gulp-nunjucks-render');
 const nj 			       = njRender.nunjucks;
 
+const gm             = require('gulp-gm');
+const parallel       = require('concurrent-transform');
+const os             = require('os');
+
 const browserSync 	 = require('browser-sync');
 const reload      	 = browserSync.reload;
  
 gulp.task('scripts', () => {
-	return gulp.src('src/scripts/**/*.js')
+	return gulp.src('src/scripts/app.js')
+    .pipe(webpack())
 		.pipe(sourcemaps.init())
 		.pipe(babel({
 			presets: ['es2015']
 		}))
-		.pipe(concat('scripts.js'))
+    .pipe(rename('app.js'))
 		.pipe(gulp.dest('dist'))
-		.pipe(rename('scripts.min.js'))
+		.pipe(rename('app.min.js'))
 		.pipe(uglify())
 		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest('dist'))
@@ -56,7 +62,7 @@ gulp.task('markup', () => {
 });
 
 gulp.task('images', () => {
-  return gulp.src('src/images/**/*.+(gif|jpg|png|svg)')
+  return gulp.src('src/media/layout/**/*.+(gif|jpg|png|svg)')
     .pipe(gulp.dest('dist/images'));
 });
 
@@ -65,13 +71,22 @@ gulp.task('fonts', () => {
 		.pipe(gulp.dest('dist/fonts'));
 });
 
+gulp.task('locations', () => {
+  gulp.src('src/media/locations/**/*')
+    .pipe(parallel(
+        gm((tmp) => tmp.resize(400).quality(60)),
+        os.cpus().length
+      ))
+      .pipe(gulp.dest('dist/images/locations'));
+});
+
 gulp.task('watch', () => {
 	gulp.watch('src/templates/**/*.+(html|nj|nunjucks)', ['markup', reload]);
 	gulp.watch('src/html/**/*.+(html|nj|nunjucks)', ['markup', reload]);
 	gulp.watch('src/styles/**/*.css', ['styles', reload]);
   gulp.watch(['src/scripts/**/*.js'], ['scripts', reload]);
 	gulp.watch(['src/fonts/**/*.js'], ['fonts', reload]);
-	gulp.watch(['src/images/**/*.+(gif|jpg|png|svg)'], ['images', reload]);
+  gulp.watch(['src/media/layout/**/*.+(gif|jpg|png|svg)'], ['images', reload]);
 	gulp.watch("*.html", reload);
 });
 

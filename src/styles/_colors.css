@@ -10,7 +10,7 @@ $lightGreen:    #778c81;
 $darkGreen:     #35403b;
 $greenyWhite:   #e0ffef;
 
-$linkColor:       $lightGreen;
+$linkColor:       $gray;
 $linkHover:       $green;
 $linkOnDark:      $white;
 $linkOnDarkHover: $greenyWhite;
