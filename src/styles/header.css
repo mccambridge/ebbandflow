@@ -185,7 +185,7 @@ header {
     padding-right: 30px;
   }
   .header {
-    height: 81px;
+    height: 102px;
     &__nav {
       lost-column: 3/10;
       &__hamburger {
