@@ -1,4 +1,5 @@
 /*index.css*/
 @import './index/hero.css';
+@import './index/byline.css';
 @import './index/brands.css';
 @import './index/locations.css';
