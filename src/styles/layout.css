@@ -1,5 +1,9 @@
 @lost flexbox flex;
 
+* {
+  box-sizing: border-box;
+}
+
 /*layout.css*/
 body {
 	background: $white;

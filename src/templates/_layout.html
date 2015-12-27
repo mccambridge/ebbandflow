@@ -14,14 +14,14 @@
     <meta name="description" content="Production and locations scouting in Charleston, SC">
     <style>
       @font-face {
-      font-family: 'icomoon';
-        src:    url('/fonts/icomoon.eot?tsu3wn');
-        src:    url('/fonts/icomoon.eot?tsu3wn#iefix') format('embedded-opentype'),
-            url('/fonts/icomoon.ttf?tsu3wn') format('truetype'),
-            url('/fonts/icomoon.woff?tsu3wn') format('woff'),
-            url('/fonts/icomoon.svg?tsu3wn#icomoon') format('svg');
-        font-weight: normal;
-        font-style: normal;
+          font-family: 'icomoon';
+          src:    url('fonts/icomoon.eot?x0362f');
+          src:    url('fonts/icomoon.eot?x0362f#iefix') format('embedded-opentype'),
+              url('fonts/icomoon.ttf?x0362f') format('truetype'),
+              url('fonts/icomoon.woff?x0362f') format('woff'),
+              url('fonts/icomoon.svg?x0362f#icomoon') format('svg');
+          font-weight: normal;
+          font-style: normal;
       }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -48,17 +48,18 @@
       </section>
       <section class="header">
         <nav class="header__nav">
-            <ul class="header__nav__list">
-                <li><a href="/">Home</a></li>
-                <li><a href="/services.html">Services</a></li>
-                <li><a href="/locations.html">Locations</a></li>
-            </ul>
+          <i id="header-menu-trigger" class="header__nav__hamburger icon icon-menu"></i>
+          <ul class="header__nav__list">
+              <li><a href="/">Home</a></li>
+              <li><a href="/services.html">Services</a></li>
+              <li><a href="/locations.html">Locations</a></li>
+          </ul>
         </nav>
         <div class="header__title">
             <h1 class="header__title__wordmark wordmark">Ebb &amp; Flow Pictures<br /><span>Charleston, <span class="header__title__state-full">South Carolina</span><span class="header__title__state-short">SC</span></span></h1>
         </div>
         <div class="header__logo">
-            <img class="header__logo__img" src="/images/compass.svg" alt="Ebb & Flow Pictures logo" />
+            <img class="header__logo__img svg" src="/images/compass.svg" alt="Ebb & Flow Pictures logo" />
         </div>
       </section>
     </header>
@@ -71,6 +72,7 @@
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || alert('Oh, no! The page can\'t find an important file. Things might not quite work properly.')</script>
+    <script src="/scripts.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
