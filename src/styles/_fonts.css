@@ -42,7 +42,7 @@ h1, h2, h3 {
   }
 }
 
-h1.wordmark {
+.wordmark {
   font-family: $logoFont;
   text-transform: uppercase;
   > span {

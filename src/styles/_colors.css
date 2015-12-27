@@ -10,3 +10,5 @@ $linkColor:       $gray;
 $linkHover:       $green;
 $linkOnDark:      $white;
 $linkOnDarkHover: $greenyWhite;
+
+$borderColor: rgba(244,255,244,0.5);
