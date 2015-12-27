@@ -29,10 +29,6 @@
 @media $medium {
   .brands__list {
     padding: 0 15%;
-    margin-bottom: 162px;
-  }
-  .brands__logo {
-    margin: 66px 0;
   }
 }
 

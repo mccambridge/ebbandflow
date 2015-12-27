@@ -51,37 +51,25 @@
 	// app.js
 	'use strict';
 
-	var svg = __webpack_require__(1);
-	var menuClickHandler = __webpack_require__(2);
+	var deviceTweaks = __webpack_require__(1);
+	var svg = __webpack_require__(2);
+	var debounce = __webpack_require__(3);
+	var menuClickHandler = __webpack_require__(4);
 
 	(function ($) {
 		var ebby = {
-			deviceTweaks: function deviceTweaks() {
-				var $ww = $(window).width();
-				if ($ww < 1200) {
-					$('.header__nav__list').addClass('header__nav__list--off-canvas');
-				}
-				if ($ww >= 600) {
-					var $grid = $('.grid').masonry({
-						itemSelector: '.grid__item',
-						columnWidth: '.grid__sizer',
-						percentPosition: true
-					});
-
-					$grid.imagesLoaded().progress(function () {
-						$grid.masonry('layout');
-					});
-				}
-			},
 			events: function events() {
 				// wire up hamburger
 				$('body').on('click touchend', '#header-menu-trigger', menuClickHandler);
+				$(window).smartresize(function () {
+					deviceTweaks();
+				});
 			},
 			init: function init() {
 				var _this = this;
 
 				$(document).ready(function () {
-					_this.deviceTweaks();
+					deviceTweaks();
 					_this.events();
 					svg();
 				});
@@ -94,6 +82,30 @@
 	/***/
 },
 /* 1 */
+/***/function (module, exports) {
+
+	// device.js
+	module.exports = function deviceTweaks() {
+		var $ww = $(window).width();
+		if ($ww < 1200) {
+			$('.header__nav__list').addClass('header__nav__list--off-canvas');
+		}
+		if ($ww >= 900) {
+			var $grid = $('.grid').masonry({
+				itemSelector: '.grid__item',
+				columnWidth: '.grid__sizer',
+				percentPosition: true
+			});
+
+			$grid.imagesLoaded().progress(function () {
+				$grid.masonry('layout');
+			});
+		}
+	};
+
+	/***/
+},
+/* 2 */
 /***/function (module, exports) {
 
 	// svg.js
@@ -129,7 +141,38 @@
 
 	/***/
 },
-/* 2 */
+/* 3 */
+/***/function (module, exports) {
+
+	(function ($, sr) {
+
+		// debouncing function from John Hann
+		// http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
+		var debounce = function debounce(func, threshold, execAsap) {
+			var timeout;
+
+			return function debounced() {
+				var obj = this,
+				    args = arguments;
+				function delayed() {
+					if (!execAsap) func.apply(obj, args);
+					timeout = null;
+				};
+
+				if (timeout) clearTimeout(timeout);else if (execAsap) func.apply(obj, args);
+
+				timeout = setTimeout(delayed, threshold || 100);
+			};
+		};
+		// smartresize
+		jQuery.fn[sr] = function (fn) {
+			return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr);
+		};
+	})(jQuery, 'smartresize');
+
+	/***/
+},
+/* 4 */
 /***/function (module, exports) {
 
 	// menuClick.js
