@@ -35,7 +35,7 @@ h1, h2, h3 {
   font-family: $headingFont;
   font-weight: normal;
   color: $black;
-  font-size: 27px;
+  font-size: 21px;
   text-shadow: 0 -1px 0 $greenyWhite;
   &.uppercase {
     text-transform: uppercase;
@@ -51,6 +51,12 @@ h1, h2, h3 {
   }
 }
 
+@media $small {
+  h1, h2, h3 {
+    font-size: 27px;
+  }
+}
+
 .wordmark {
   font-family: $logoFont;
   text-transform: uppercase;
@@ -63,5 +69,11 @@ h1, h2, h3 {
 
 h3 {
   color: $lightGreen;
-  font-size: $subheading;
+  font-size: $mediumText;
+}
+
+@media $small {
+  h3 {
+    font-size: $subheading;
+  }
 }
