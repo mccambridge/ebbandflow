@@ -13,7 +13,7 @@
   }
 }
 
-@media $large {
+@media $tablet {
   .grid {
     display: flex;
     &__sizer {

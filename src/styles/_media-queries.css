@@ -2,8 +2,12 @@
 
 $mqSmall: 375px;
 $mqMedium: 600px;
+$mqTablet: 768px;
+$mqPrettyBig: 900px;
 $mqLarge: 1200px;
 
 $small: screen and (min-width: $mqSmall);
 $medium: screen and (min-width: $mqMedium);
+$tablet: screen and (min-width: $mqTablet);
+$prettyBig: screen and (min-width: $mqPrettyBig);
 $large: screen and (min-width: $mqLarge);

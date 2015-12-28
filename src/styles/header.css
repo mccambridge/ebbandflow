@@ -8,7 +8,7 @@ header {
 .tiny-header {
   display: flex;
   justify-content: flex-end;
-  background: $darkGreen;
+  background: $black;
   border-bottom: 1px solid $trueBlack;
   padding-right: 12px;
   position: relative;

@@ -10,7 +10,7 @@ const postcss		     = require('gulp-postcss');
 const precss 		     = require('precss');
 const postcssfocus   = require('postcss-focus')
 const autoprefixer   = require('autoprefixer');
-const mqpacker       = require('css-mqpacker');
+// const mqpacker       = require('css-mqpacker');
 const csswring       = require('csswring');
 const lost			     = require('lost');
 
@@ -46,7 +46,7 @@ gulp.task('styles', () => {
     postcssfocus,
 		lost,
 		autoprefixer({browsers: ['last 2 versions']}),
-    mqpacker,
+    // mqpacker,
     csswring
 	];
 	return gulp.src('src/styles/styles.css')
