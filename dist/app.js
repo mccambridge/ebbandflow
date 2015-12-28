@@ -199,10 +199,11 @@
 
 		// handle transition on logo
 		if (!$logo.hasClass('header__logo--off-canvas')) {
+			console.log('yo!');
 			$wordmark.toggleClass('header__title__wordmark--off-canvas--exiting');
 			$logo.toggleClass('header__logo--off-canvas--exiting');
 			setTimeout(function () {
-				$logo.toggleClass('header__title__wordmark--off-canvas--exiting');
+				$wordmark.toggleClass('header__title__wordmark--off-canvas--exiting');
 				$logo.toggleClass('header__logo--off-canvas--exiting');
 			}, 500);
 		}
