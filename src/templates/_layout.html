@@ -51,8 +51,8 @@
             <i id="header-menu-trigger" class="header__nav__hamburger icon icon-menu"></i>
             <ul class="header__nav__list">
                 <li><a href="/">Home</a></li>
-                <li><a href="/services.html">Services</a></li>
-                <li><a href="/locations.html">Locations</a></li>
+                <li><a href="/">Services</a></li>
+                <li><a href="/">Locations</a></li>
             </ul>
           </nav>
           <div class="header__title">
@@ -71,8 +71,14 @@
       </footer>
     </div>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script>window.jQuery || alert('Oh, no! The page can\'t find an important file. Things might not quite work properly.')</script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>window.jQuery || (function() {
+        var jWherey = document.createElement("script");
+        jWherey.src = "/vendor/jquery-2.1.4.min.js";
+        jWherey.type="text/javascript";
+        document.getElementsByTagName("head")[0].appendChild(jWherey);
+      })();
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.2.0/imagesloaded.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js"></script>
     <script src="/app.min.js"></script>
