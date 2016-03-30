@@ -2,7 +2,7 @@
 .hero {
   lost-align: center;
   min-height: 480px;
-  background: url(/images/desert.jpg) center center no-repeat;
+  background: url(/images/hero.jpg) center bottom no-repeat;
   background-size: cover;
   &__heading {
     color: $white;
@@ -22,7 +22,6 @@
 
 @media $large {
   .hero {
-    background-position: center -120px;
     &__heading {
       font-size: $hugeHeading;
     }

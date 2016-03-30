@@ -6,6 +6,9 @@ module.exports = function deviceTweaks() {
       .addClass('header__nav__list--off-canvas');
   }
   if ($ww >= 900) {
+    $('.header__nav__list')
+      .removeClass('header__nav__list--off-canvas');
+
     var $grid = $('.grid').masonry({
       itemSelector: '.grid__item',
       columnWidth: '.grid__sizer',
