@@ -64,11 +64,15 @@
 				$(window).smartresize(function () {
 					deviceTweaks();
 				});
+				$('.lazy').on('appear', function () {
+					$('.grid').masonry('layout');
+				});
 			},
 			init: function init() {
 				var _this = this;
 
 				$(document).ready(function () {
+					$('.lazy').lazyload();
 					deviceTweaks();
 					_this.events();
 					svg();

@@ -81,55 +81,91 @@
   <div class="grid">
     <div class="grid__sizer"></div>
     <div class="grid__item grid__item--double-wide">
-      <img src="/images/locations/abe-2.jpg" alt="">
+      <img class="lazy" data-original="/images/locations/abe-2.jpg" alt="">
     </div>
     <div class="grid__item">
-      <img src="/images/locations/jeep.jpg" alt="">
+      <img class="lazy" data-original="/images/locations/jeep.jpg" alt="">
     </div>
     <div class="grid__item">
-      <img src="/images/locations/abe.jpg" alt="">
+      <img class="lazy" data-original="/images/locations/abe.jpg" alt="">
     </div>
     <div class="grid__item">
-      <img src="/images/locations/plantation.jpg" alt="">
+      <img class="lazy" data-original="/images/locations/plantation.jpg" alt="">
     </div>
     <div class="grid__item">
-      <img src="/images/locations/teen-vogue-beach.jpg" alt="">
+      <img class="lazy" data-original="/images/locations/teen-vogue-beach.jpg" alt="">
     </div>
     <div class="grid__item">
-      <img src="/images/locations/teen-vogue-dock.jpg" alt="">
+      <img class="lazy" data-original="/images/locations/teen-vogue-dock.jpg" alt="">
     </div>
     <div class="grid__item">
-      <img src="/images/locations/teen-vogue-plantation.jpg" alt="">
+      <img class="lazy" data-original="/images/locations/teen-vogue-plantation.jpg" alt="">
     </div>
     <div class="grid__item">
-      <img src="/images/locations/berg-1.jpg" alt="">
+      <img class="lazy" data-original="/images/locations/berg-1.jpg" alt="">
+    </div>
+    <div class="grid__item">
+      <img class="lazy" data-original="/images/locations/berg-2.jpg" alt="">
+    </div>
+    <div class="grid__item">
+      <img class="lazy" data-original="/images/locations/berg-3.jpg" alt="">
+    </div>
+    <div class="grid__item">
+      <img class="lazy" data-original="/images/locations/berg-4.jpg" alt="">
+    </div>
+    <div class="grid__item">
+      <img class="lazy" data-original="/images/locations/berg-6.jpg" alt="">
+    </div>
+    <div class="grid__item">
+      <img class="lazy" data-original="/images/locations/warrior-road-forest.jpg" alt="">
+    </div>
+    <div class="grid__item">
+      <img class="lazy" data-original="/images/locations/jeep-harbor.jpg" alt="">
+    </div>
+    <div class="grid__item">
+      <img class="lazy" data-original="/images/locations/ulla.jpg" alt="">
     </div>
     <div class="grid__item grid__item--double-wide">
-      <img src="/images/locations/berg-2.jpg" alt="">
+      <img class="lazy" data-original="/images/locations/warrior-road-beach.jpg" alt="">
     </div>
     <div class="grid__item">
-      <img src="/images/locations/berg-3.jpg" alt="">
+      <img class="lazy" data-original="/images/locations/c-of-c.jpg" alt="">
     </div>
     <div class="grid__item">
-      <img src="/images/locations/berg-4.jpg" alt="">
+      <img class="lazy" data-original="/images/locations/cigar-factory.jpg" alt="">
     </div>
     <div class="grid__item">
-      <img src="/images/locations/berg-6.jpg" alt="">
+      <img class="lazy" data-original="/images/locations/beach.jpg" alt="">
     </div>
     <div class="grid__item">
-      <img src="/images/locations/ulla.jpg" alt="">
+      <img class="lazy" data-original="/images/locations/camp.jpg" alt="">
     </div>
     <div class="grid__item">
-      <img src="/images/locations/warrior-road-beach.jpg" alt="">
+      <img class="lazy" data-original="/images/locations/dock.jpg" alt="">
     </div>
     <div class="grid__item">
-      <img src="/images/locations/c-of-c.jpg" alt="">
+      <img class="lazy" data-original="/images/locations/picnic.jpg" alt="">
     </div>
     <div class="grid__item">
-      <img src="/images/locations/warrior-road-forest.jpg" alt="">
+      <img class="lazy" data-original="/images/locations/boat.jpg" alt="">
     </div>
     <div class="grid__item">
-      <img src="/images/locations/cigar-factory.jpg" alt="">
+      <img class="lazy" data-original="/images/locations/cobbles.jpg" alt="">
+    </div>
+    <div class="grid__item grid__item--double-wide">
+      <img class="lazy" data-original="/images/locations/xmas.jpg" alt="">
+    </div>
+    <div class="grid__item">
+      <img class="lazy" data-original="/images/locations/jetty.jpg" alt="">
+    </div>
+    <div class="grid__item">
+      <img class="lazy" data-original="/images/locations/morris.jpg" alt="">
+    </div>
+    <div class="grid__item">
+      <img class="lazy" data-original="/images/locations/puppy.jpg" alt="">
+    </div>
+    <div class="grid__item">
+      <img class="lazy" data-original="/images/locations/set.jpg" alt="">
     </div>
   </div>
 </section>
@@ -166,17 +202,21 @@
       })();
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.2.0/imagesloaded.pkgd.min.js"></script>
+    <script src="/vendor/jquery.lazyload.min.js"></script>
+    <script src="/vendor/jquery.scrollstop.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js"></script>
     <script src="/app.min.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='//www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-3587300-4', 'auto');
+      ga('send', 'pageview');
+
     </script>
   </body>
 </html>

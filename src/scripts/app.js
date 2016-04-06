@@ -13,10 +13,14 @@ const menuClickHandler = require('./events/menuClick.js');
       $(window).smartresize(function(){
         deviceTweaks();
       });
+      $('.lazy').on('appear', () => {
+        $('.grid').masonry('layout');
+      });
     },
 
     init() {
       $(document).ready(() => {
+        $('.lazy').lazyload();
         deviceTweaks();
         this.events();
         svg();
