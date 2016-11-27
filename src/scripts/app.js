@@ -26,7 +26,7 @@ const tseuqer = ['74','69','6D','67','72','61','64','79','40','6D','65','2E','63
 
     decodeContactInto() {
       $('#liame').html(`<a href="mailto:&#x${liame.join(';&#x')};">&#x${liame.join(';&#x')};</a>`);
-      $('#enohp').html(`&#x${enohp.join(';&#x')};`);
+      $('#enohp').html(`<a href="tel:&#x${enohp.join(';&#x')};">&#x${enohp.join(';&#x')};</a>`);
       $('#tseuqer').html(`<a href="mailto:&#x${tseuqer.join(';&#x')};">Request access to full photo gallery</a>`);
     },
 

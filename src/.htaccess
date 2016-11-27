@@ -1,1 +1,2 @@
-garble garble
+RewriteEngine On
+RewriteRule ^hello bio [NC,L]]
