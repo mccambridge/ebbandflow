@@ -1,6 +1,6 @@
 /*index.css*/
-@import './pages/hero.css';
-@import './pages/byline.css';
-@import './pages/brands.css';
-@import './pages/locations.css';
+@import './pages/index-hero.css';
+@import './pages/index-byline.css';
+@import './pages/index-brands.css';
+@import './pages/index-locations.css';
 @import './pages/bio.css';

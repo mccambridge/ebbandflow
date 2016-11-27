@@ -1,7 +1,7 @@
 /*brands.css*/
 .brands {
-  background-color: $white;
-  padding: $section-padding;
+  background-color: $lightestGray;
+  padding: $section-padding--fat;
   text-align: center;
   &__subheading {
     width: 100%;

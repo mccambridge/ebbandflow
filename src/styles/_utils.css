@@ -18,4 +18,8 @@
     float: right;
     margin-left: 18px;
   }
+  .img-bordered {
+    border: 2px solid $lightGray;
+    box-shadow: 0 1px 2px $gray;
+  }
 }
