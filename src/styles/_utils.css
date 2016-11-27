@@ -1,14 +1,21 @@
 /*_utils.css*/
+.img-left, .img-right {
+  display: block;
+  height: auto;
+  margin-bottom: 15px;
+}
 
 @media $tablet {
+  .img-left, .img-right {
+    display: inline;
+    margin-bottom: 9px;
+  }
   .img-left {
     float: left;
     margin-right: 18px;
-    margin-bottom: 9px;
   }
   .img-right {
     float: right;
     margin-left: 18px;
-    margin-bottom: 9px;
   }
 }

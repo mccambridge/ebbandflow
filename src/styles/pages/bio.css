@@ -1,15 +1,19 @@
 .bio {
-  max-width: 1024px;
-  font-size: 18px;
+  max-width: 900px;
+  font-size: 16px;
   margin: 0 auto;
-  padding: $section-padding;
+  padding: 12px 18px;
   &__container {
     
   }
   &__section {
-    margin: 42px 0;
+    padding: 6px 0 18px;
+    margin: 0;
+    border-top: 2px solid $lightGray;
     &:first-child {
       margin-top: 0;
+      padding-top: 0;
+      border-top: none;
     }
   }
   a {
@@ -17,15 +21,22 @@
     font-weight: bold;
   }
   img {
-    border: 3px solid $lightGray;
-    box-shadow: 0 1px 3px #666;
+    border: 2px solid $lightGray;
+    box-shadow: 0 1px 2px $gray;
   }
 }
 
 @media $tablet {
   .bio {
+    font-size: 20px;
+    padding: $section-padding;
     &__img {
       width: 49%;
+    }
+    &__section {
+      margin: 45px 0;
+      padding: 0;
+      border-top: none;
     }
   }
 }
