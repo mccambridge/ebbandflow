@@ -54,6 +54,7 @@
 
 @media $tablet {
   .footer {
+    padding: $section-padding--wide;
     &__container {
       display: flex;
       align-items: center;
