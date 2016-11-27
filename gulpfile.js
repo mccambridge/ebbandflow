@@ -45,6 +45,11 @@ gulp.task('vendor', () => {
     .pipe(gulp.dest('dist/vendor'));
 });
 
+gulp.task('htaccess', () => {
+  return gulp.src('src/.htaccess')
+    .pipe(gulp.dest('dist'));
+});
+
 gulp.task('styles', () => {
 	const processors = [
 		precss(),
@@ -93,6 +98,7 @@ gulp.task('watch', () => {
 	gulp.watch(['src/fonts/**/*'], ['fonts', reload]);
   gulp.watch(['src/media/layout/**/*.+(gif|jpg|png|svg)'], ['images', reload]);
 	gulp.watch("*.html", reload);
+  gulp.watch(".htaccess", ['htaccess', reload]);
 });
 
 gulp.task('sync', () => {
@@ -103,6 +109,6 @@ gulp.task('sync', () => {
 	});
 });
 
-gulp.task('server', ['markup', 'styles', 'fonts', 'images', 'sync', 'scripts', 'vendor', 'watch']);
+gulp.task('server', ['markup', 'styles', 'fonts', 'images', 'sync', 'scripts', 'vendor', 'htaccess', 'watch']);
 
-gulp.task('default', ['markup', 'styles', 'fonts', 'images', 'scripts', 'vendor']);
+gulp.task('default', ['markup', 'styles', 'fonts', 'images', 'scripts', 'vendor', 'htacces']);
