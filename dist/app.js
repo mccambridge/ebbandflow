@@ -55,6 +55,7 @@
 	var svg = __webpack_require__(2);
 	var debounce = __webpack_require__(3);
 	var menuClickHandler = __webpack_require__(4);
+	var headerClickHandler = __webpack_require__(5);
 
 	var liame = ['74', '69', '6D', '67', '72', '61', '64', '79', '40', '6D', '65', '2E', '63', '6F', '6D'];
 	var enohp = ['28', '38', '34', '33', '29', '20', '32', '32', '34', '2D', '30', '37', '35', '39'];
@@ -65,6 +66,7 @@
 			events: function events() {
 				// wire up hamburger
 				$('body').on('click touchend', '#header-menu-trigger', menuClickHandler);
+				$('body').on('click touchend', '#nav-title', headerClickHandler);
 				$(window).smartresize(function () {
 					deviceTweaks();
 				});
@@ -223,6 +225,17 @@
 				$logo.toggleClass('header__logo--off-canvas--exiting');
 			}, 500);
 		}
+	};
+
+	/***/
+},
+/* 5 */
+/***/function (module, exports) {
+
+	// headerClick.js
+	// handle clicking on the wordmark, which is not an <a> tag
+	module.exports = function headerClickHandler() {
+		window.location = '/';
 	};
 
 	/***/

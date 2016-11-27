@@ -4,6 +4,7 @@ const deviceTweaks = require('./device.js');
 const svg = require('./utils/svg.js');
 const debounce = require('./utils/debounce.js');
 const menuClickHandler = require('./events/menuClick.js');
+const headerClickHandler = require('./events/headerClick.js');
 
 const liame = ['74','69','6D','67','72','61','64','79','40','6D','65','2E','63','6F','6D'];
 const enohp = ['28','38','34','33','29','20','32','32','34','2D','30','37','35','39'];
@@ -14,6 +15,7 @@ const tseuqer = ['74','69','6D','67','72','61','64','79','40','6D','65','2E','63
     events() {
       // wire up hamburger
       $('body').on('click touchend', '#header-menu-trigger', menuClickHandler);
+      $('body').on('click touchend', '#nav-title', headerClickHandler);
       $(window).smartresize(function(){
         deviceTweaks();
       });
