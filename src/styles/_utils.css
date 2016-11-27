@@ -1,1 +1,14 @@
 /*_utils.css*/
+
+@media $tablet {
+  .img-left {
+    float: left;
+    margin-right: 18px;
+    margin-bottom: 9px;
+  }
+  .img-right {
+    float: right;
+    margin-left: 18px;
+    margin-bottom: 9px;
+  }
+}

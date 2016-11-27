@@ -20,3 +20,7 @@ body.frozen, html.frozen {
 header, footer, section {
 	lost-utility: clearfix;
 }
+
+img {
+  max-width: 100%;
+}
